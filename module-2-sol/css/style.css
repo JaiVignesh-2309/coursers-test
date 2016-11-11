@@ -1,41 +1,74 @@
-
-/********** Base styles **********/
+/* width and height will include border and padding */
 * {
   box-sizing: border-box;
-  margin: 0px;
-  padding: 0px;
 }
+
+/* the heading of the page: e.g. 'Our Menu';*/
 h1 {
-  margin-top:30px; 
-  margin-bottom: 50px;
+  margin-bottom: 15px;
   text-align: center;
+  font-size: 175%;
+  font-family:  cursive, Helvetica, sans-serif;
 }
 
-
-
- p{
-  border: 1px solid black;
-  padding: 10px;
-  background-color: grey;
-  width: 95%;
-  height: 150px;
-  font-family: Helvetica;
-  color: black;
-  margin: 10px;
- position: relative;
-overflow: hidden;
-  
-}
-
-/* Simple Responsive Framework. */
 .row {
   width: 100%;
+  font-family: Helvetica, sans-serif;
 }
-/********** DESKTOP **********/
+
+
+/*Set an anchor at the div containers of p elements*/
+.row div{
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* different food categories: e.g. 'Chicken'; */
+#p1{
+  background-color: #99cc00;
+}
+#p2{
+  background-color: #ff0000;
+}
+#p3{
+  background-color: #ffaabb;
+}
+
+ 
+/* content of every food category: e.g. 'In girum imus nocte [...]'; */
+p.content{
+  border: 1px solid black;
+  background-color:  #bab4b6;
+  font-size: 100%;
+  color: black;
+  padding-top: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+/* food category: e.g. 'Chicken'; */
+p.category{
+  position: absolute;
+  top:  16px;
+  padding: 2.5px;
+  right: 15px;
+  width: 90px;
+  height: 25px;
+  margin: 0px;
+  border: 1px solid black; 
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+  color: black;
+}
+
+
+/********** desktop devices only **********/
 @media (min-width: 992px) {
-  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4 {
     float: left;
-    
   }
   .col-lg-1 {
     width: 8.33%;
@@ -49,45 +82,11 @@ overflow: hidden;
   .col-lg-4 {
     width: 33.33%;
   }
-  .col-lg-5 {
-    width: 41.66%;
-  }
-  .col-lg-6 {
-    width: 50%;
-  }
-  .col-lg-7 {
-    width: 58.33%;
-  }
-  .col-lg-8 {
-    width: 66.66%;
-  }
-  .col-lg-9 {
-    width: 74.99%;
-  }
-  .col-lg-10 {
-    width: 83.33%;
-  }
-  .col-lg-11 {
-    width: 91.66%;
-  }
-  .col-lg-12 {
-    width: 100%;
-  }
 }
-/********** TABLET **********/
+/********** Tablet devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+  .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-12 {
     float: left;
-    
-  }
-  .col-md-1 {
-    width: 8.33%;
-  }
-  .col-md-2 {
-    width: 16.66%;
-  }
-  .col-md-3 {
-    width: 25%;
   }
   .col-md-4 {
     width: 33.33%;
@@ -104,59 +103,32 @@ overflow: hidden;
   .col-md-8 {
     width: 66.66%;
   }
-  .col-md-9 {
-    width: 74.99%;
-  }
-  .col-md-10 {
-    width: 83.33%;
-  }
-  .col-md-11 {
-    width: 91.66%;
-  }
   .col-md-12 {
     width: 100%;
   }
 }
-/******MOBILE********/
+
+/********** mobile devices only **********/
+/* Also without this explicit media query, the elements behaving
+just like regular block level elements would automatically stack one
+on top of the other.
+Anyway, it's better to explicit define the media query also for
+mobile phones. */
+
 @media (max-width: 767px) {
-  .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+  .col-sd-9, .col-sd-10, .col-sd-11, .col-sd-12 {
     float: left;
-    
   }
-  .col-sm-1 {
-    width: 8.33%;
-  }
-  .col-sm-2 {
-    width: 16.66%;
-  }
-  .col-sm-3 {
-    width: 25%;
-  }
-  .col-sm-4 {
-    width: 33.33%;
-  }
-  .col-sm-5 {
-    width: 41.66%;
-  }
-  .col-sm-6 {
-    width: 50%;
-  }
-  .col-sm-7 {
-    width: 58.33%;
-  }
-  .col-sm-8 {
-    width: 66.66%;
-  }
-  .col-sm-9 {
+  .col-sd-9 {
     width: 74.99%;
   }
-  .col-sm-10 {
+  .col-sd-10 {
     width: 83.33%;
   }
-  .col-sm-11 {
+  .col-sd-11 {
     width: 91.66%;
   }
-  .col-sm-12 {
+  .col-sd-12 {
     width: 100%;
   }
 }
