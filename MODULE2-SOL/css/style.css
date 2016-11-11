@@ -1,0 +1,134 @@
+/* width and height will include border and padding */
+* {
+  box-sizing: border-box;
+}
+
+/* the heading of the page: e.g. 'Our Menu';*/
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 175%;
+  font-family:  cursive, Helvetica, sans-serif;
+}
+
+.row {
+  width: 100%;
+  font-family: Helvetica, sans-serif;
+}
+
+
+/*Set an anchor at the div containers of p elements*/
+.row div{
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* different food categories: e.g. 'Chicken'; */
+#p1{
+  background-color: #99cc00;
+}
+#p2{
+  background-color: #ff0000;
+}
+#p3{
+  background-color: #ffaabb;
+}
+
+ 
+/* content of every food category: e.g. 'In girum imus nocte [...]'; */
+p.content{
+  border: 1px solid black;
+  background-color:  #bab4b6;
+  font-size: 100%;
+  color: black;
+  padding-top: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 15px;
+}
+
+/* food category: e.g. 'Chicken'; */
+p.category{
+  position: absolute;
+  top:  16px;
+  padding: 2.5px;
+  right: 15px;
+  width: 90px;
+  height: 25px;
+  margin: 0px;
+  border: 1px solid black; 
+  text-align: center;
+  font-size: 100%;
+  font-weight: bold;
+  color: black;
+}
+
+
+/********** desktop devices only **********/
+@media (min-width: 992px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4 {
+    float: left;
+  }
+  .col-lg-1 {
+    width: 8.33%;
+  }
+  .col-lg-2 {
+    width: 16.66%;
+  }
+  .col-lg-3 {
+    width: 25%;
+  }
+  .col-lg-4 {
+    width: 33.33%;
+  }
+}
+/********** Tablet devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-12 {
+    float: left;
+  }
+  .col-md-4 {
+    width: 33.33%;
+  }
+  .col-md-5 {
+    width: 41.66%;
+  }
+  .col-md-6 {
+    width: 50%;
+  }
+  .col-md-7 {
+    width: 58.33%;
+  }
+  .col-md-8 {
+    width: 66.66%;
+  }
+  .col-md-12 {
+    width: 100%;
+  }
+}
+
+/********** mobile devices only **********/
+/* Also without this explicit media query, the elements behaving
+just like regular block level elements would automatically stack one
+on top of the other.
+Anyway, it's better to explicit define the media query also for
+mobile phones. */
+
+@media (max-width: 767px) {
+  .col-sd-9, .col-sd-10, .col-sd-11, .col-sd-12 {
+    float: left;
+  }
+  .col-sd-9 {
+    width: 74.99%;
+  }
+  .col-sd-10 {
+    width: 83.33%;
+  }
+  .col-sd-11 {
+    width: 91.66%;
+  }
+  .col-sd-12 {
+    width: 100%;
+  }
+}
