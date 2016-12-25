@@ -1,0 +1,28 @@
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+section h2 {
+  font-size: 1.7em;
+}
+
+section p {
+  padding: 0px 10px 6px 10px;
+}
+
+section {
+  background-color: Gainsboro;
+  border: 1px solid;
+  margin: 0px 0px 25px 0px;
+  padding: 0px;
+}
+
+div ul, div li {
+  border: 1px solid;
+}
